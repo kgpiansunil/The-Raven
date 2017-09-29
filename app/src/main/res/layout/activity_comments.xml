@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="in.example.summi.raven.CommentsActivity">
+
+    <include layout="@layout/appbar_layout" android:id="@+id/comments_appbar"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/comment_on_bar"
+        android:elevation="10dp"
+        android:layout_below="@id/comments_appbar"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical"
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#fff"
+            android:text=""
+            android:layout_toLeftOf="@+id/comment_on_image"
+            android:id="@+id/comment_on_person"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColor="#fff"
+            android:text=""
+            android:layout_below="@+id/comment_on_time"
+            android:layout_toLeftOf="@+id/comment_on_image"
+            android:id="@+id/comment_on_tv"
+            android:textStyle="bold"
+           />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment_on_time"
+            android:text="time"
+            android:layout_below="@+id/comment_on_person"
+            android:textColor="@color/bgwhite"
+            android:layout_marginLeft="20dp"
+            android:textSize="12dp"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/comment_on_image"
+            android:layout_height="60dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/linear_layout_comments"
+        android:layout_below="@+id/comment_on_bar"
+        android:id="@+id/comments_rv">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:id="@+id/linear_layout_comments"
+        android:background="@android:color/transparent"
+        android:weightSum="10"
+        android:layout_alignParentBottom="true">
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:background="@drawable/comment_bg"
+        android:id="@+id/Add_comment_et"
+        android:hint="Add comment.."
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="@color/bgwhite"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true" />
+
+    <ImageButton
+        android:id="@+id/sub_comment_but"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerInside"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/send_comment"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/bgwhite"
+        android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+</RelativeLayout>
