@@ -103,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             HashMap<String,String> userMap = new HashMap<String, String>();
                             userMap.put("name",name);
-                            userMap.put("status","Sociolized");
+                            userMap.put("status","Ravenized");
                             userMap.put("image","default");
                             userMap.put("thumb_image","default");
                             userMap.put("device_token", FirebaseInstanceId.getInstance().getToken());
