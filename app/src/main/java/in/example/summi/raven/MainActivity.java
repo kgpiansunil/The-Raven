@@ -34,6 +34,7 @@ import javax.crypto.NoSuchPaddingException;
 
 // Author name - Suresh Gandhi
 // Author email id - sureshgandhi200@gmail.com
+// Author University - Indian Institute Of Technology, Kharagpur
 
 public class MainActivity extends AppCompatActivity {
 
