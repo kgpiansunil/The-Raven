@@ -32,6 +32,9 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
+// Author name - Suresh Gandhi
+// Author email id - sureshgandhi200@gmail.com
+
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public String MY_PREFS_NAME = "socio_prefs";
 
 
-    public void genKeys() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException{
+    public void genKeys() throws NoSuchAlgorithmException {
 
 
 
